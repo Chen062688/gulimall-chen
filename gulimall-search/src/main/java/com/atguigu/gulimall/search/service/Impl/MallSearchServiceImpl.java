@@ -359,6 +359,14 @@ public class MallSearchServiceImpl implements MallSearchService {
         return result;
     }
 
+    /**
+     * 查询字符串替换
+     *
+     * @param param 参数
+     * @param value 价值
+     * @param key   关键
+     * @return {@link String}
+     */
     private static String replaceQueryString(SearchParam param, String value,String key) {
         String encode = null;
         try {
