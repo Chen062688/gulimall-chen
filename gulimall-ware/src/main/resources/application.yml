@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    username: root
+    password: 1234
+    url: jdbc:mysql://localhost:3306/gulimall_wms?serverTimezone=UTC&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 #nacos注册中心的地址
+  application:
+    name: gulimall-ware
+  jackson: #格式化事件戳的格式为指定格式
+      date-format: yyyy-MM-dd HH:mm:ss
+# MapperScan
+# sql映射文件位置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 11000
+logging:
+  level: 
+    com.atguigu: debug
+  #seata配置
+#seata:
+#  enabled: true
+#  enableAutoDataSourceProxy: false
